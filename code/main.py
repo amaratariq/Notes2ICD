@@ -15,11 +15,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--notes_file', type=str, required=True, help='name of the excel sheet containin all notes in column titles NOTE_TEXT')
     parser.add_argument('--mode', type=str, required=True, help='partial matching or CDE')
-    parser.add_argument('--RankedIndex', type=boolean, required=True, help='True or False, generate ranked retrievla index of groundtruth code, notes file must have DX_CODE_all column')
+    parser.add_argument('--RankedIndex', type=boolean, required=True, help='True or False, generate ranked retrieval index of groundtruth code, notes file must have DX_CODE_all column')
     
     
     args = parser.parse_args()
     print(args)
+
+    notes_file = args.notes_file
+    mode = args.mode
+    RankedIndex = args.RankedIndex
     
     print('reading notes')
     df = pd.read_excel(header_data+notes_file)
