@@ -19,6 +19,7 @@ def main():
     
     
     args = parser.parse_args()
+    print(args)
     
     print('reading notes')
     df = pd.read_excel(header_data+notes_file)
