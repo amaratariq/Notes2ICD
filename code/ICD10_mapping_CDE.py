@@ -10,7 +10,7 @@ def code_mapping(df, dct_in, check_gt):
     print('input notes embeddings:\t', dct_in['mat'].shape, len(dct_in['keys']))
 
     dct_out = pkl.load(open('ICD10/ICD10_vocab_new_pipe_split_az_ed_new.pkl', 'rb'))
-
+    sim_all = cos_sim(dct_in['mat'].reshape(-1, 768), dct_out['mat'].reshape(-1, 768)).squeeze()
 
     keys_out = np.array(dct_out['keys'])
     keys_out = np.array([k.upper() for k in keys_out])
