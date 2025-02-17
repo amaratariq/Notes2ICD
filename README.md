@@ -1,5 +1,9 @@
 # Notes2ICD
-map ED notes to ICD10 codes for billing
+Map ED notes to ICD10 codes for billing
+
+![](EDcoding.jpg)
+* Proposed CDE framework to predict ICD codes from ED notes
+  
 ## requirements
 
 Download trained CDE model from https://drive.google.com/drive/folders/1BDGwphzhpNU8qm6FAeBt0qLq6bsaXdHR?usp=sharing to code/ICD10/
